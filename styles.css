@@ -1,0 +1,990 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #084dcc;
+background-image: url("img/hero-bg-pattern\ \(2\).png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+  
+.splash {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* LOGO */
+.logo {
+  width: 48px;
+  margin-bottom: 5px;
+  top: 30px;
+}
+
+/* BRAND TEXT */
+.brand .name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.brand .tagline {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* LOADING BLOCK */
+.loading {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column; /* KEY CHANGE */
+  align-items: center;
+  gap: 8px;
+}
+
+.loading-text {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(255,255,255,0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+.privacy-link { 
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.login-card {
+  background: #fff;
+  width: 420px;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding-bottom: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #0a5cff;
+  border-bottom: 2px solid #0a5cff;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.phone-input,
+.username-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: none;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flag img {
+  width: 20px;
+  height: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: #d1d5db;
+  margin: 0 12px;
+}
+
+input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+/* PASSWORD HIDDEN */
+.password-input.hidden {
+  display: none;
+}
+
+.error-message {
+  font-size: 13px;
+  color: #dc2626;
+  display: none;
+}
+
+.next-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 10px;
+  color: #9ca3af;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.next-btn.enabled {
+  background: #0a5cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.link,
+.forgot {
+  color: #0a5cff;
+  font-size: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.help {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+.lock-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.signup {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 14px;
+  width: 420px;
+  text-align: center;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+
+
+.signup-loader{
+   width:40px;
+   height:40px;
+   border:4px solid #ccc;
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+   margin-top: 20px;
+}
+
+
+.mp-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    to right,
+    #f3f4f6 0%,
+    #f3f4f6 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.mp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 60px;
+}
+
+.mp-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mp-logo-box {
+  width: 42px;
+  height: 42px;
+  background: #0a5cff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-logo-text strong {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+}
+
+.mp-logo-text small {
+  font-size: 11px;
+  color: #555;
+  display: block;
+  margin-top: 2px;
+}
+
+/* LOGIN AREA */
+.mp-login-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mp-login-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.mp-login-link {
+  padding: 8px 18px;
+  background: #eaf1ff;
+  color: #0a5cff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* MAIN */
+.mp-main {
+  display: flex;
+  padding: 0 60px;
+  min-height: calc(100vh - 120px);
+}
+
+/* LEFT */
+.mp-left {
+  width: 50%;
+  padding-top: 80px;
+  position: fixed;
+}
+
+.mp-left h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.mp-description {
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.mp-footer {
+  margin-top: 180px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* RIGHT */
+.mp-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: ;
+}
+
+/* CARD */
+.mp-card {
+  width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  position: relative;
+  left: 350px;
+}
+
+.mp-card h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.mp-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+
+.mp-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+
+.mp-icon {
+  width: 40px;
+  height: 40px;
+  background: #eef4ff;
+  color: #0a5cff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-item h4 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.mp-item p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+
+.mp-item p {
+  font-size: 13px;
+  color: #555;
+}
+
+.mp-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0a5cff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mp-btn:hover {
+  background: #084dcc;
+}
+
+/* ===========================
+   MAIN LAYOUT
+   =========================== */
+
+.reg-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 50 / 50 BACKGROUND */
+.reg-page .reg-left,
+.reg-page .reg-right {
+  width: 50%;
+  height: 100vh;
+}
+
+.reg-page .reg-left {
+  background: #f3f4f6;
+  padding: 140px 80px;
+
+  /* REQUIRED for footer */
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-page .reg-right {
+  background: #ffffff;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.reg-header {
+  position: absolute;
+  top: 24px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reg-logo {
+  height: 36px;
+}
+
+.reg-login {
+  font-size: 14px;
+}
+
+.reg-login a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ===========================
+   TEXT
+   =========================== */
+
+.reg-subtitle {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+/* ===========================
+   PROGRESS
+   =========================== */
+
+.reg-progress {
+  margin-top: 40px;
+}
+
+.reg-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.reg-step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.reg-step-title {
+  font-size: 14px;
+}
+
+.reg-line {
+  width: 2px;
+  height: 24px;
+  background: #d1d5db;
+  margin: 8px 0 8px 12px;
+}
+
+/* ===========================
+   STATE CLASSES (SCOPED)
+   =========================== */
+
+.reg-page .circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-page .active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.reg-page .completed {
+  background: #16a34a;
+  color: #fff;
+}
+
+.reg-page .pending {
+  background: #e5e7eb;
+  color: #9ca3af;
+}
+
+.reg-page .hidden {
+  display: none;
+}
+
+/* ===========================
+   FOOTER (THIS WAS THE ISSUE)
+   =========================== */
+
+.reg-page .reg-footer {
+  margin-bottom: 50px; /* pushes footer */
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.reg-footer-links {
+  margin-top: 10px;
+}
+
+.reg-footer-links a {
+  margin-right: 16px;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+
+
+
+.page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* LEFT – GREY */
+.left {
+  width: 50%;
+  background: #f3f4f6;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT – WHITE */
+.right {
+  width: 50%;
+  background: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+.brand-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+
+.left h2 {
+  margin-top: 60px;
+  font-size: 32px;
+  color: #0f172a;
+  
+}
+
+.left p {
+  margin-top: 1px;
+  color: #475569;
+}
+
+.steps {
+  margin-top: 50px;
+}
+
+.step {
+  font-size: 14px;
+  color: #94a3b8;
+  padding-left: 30px;
+  position: relative;
+}
+
+.step span {
+  font-size: 12px;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.step.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.step.active::before {
+  background: #2563eb;
+}
+
+.line {
+  width: 2px;
+  height: 22px;
+  background: #e5e7eb;
+  margin: 6px 0 6px 6px;
+}
+
+.login-wrap {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.login-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-button {
+  padding: 8px 18px;
+  background: #eaf1ff;
+  color: #0a5cff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.login-btn:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   CARD (VISIBLE & LOWER)
+========================= */
+.card {
+  width: 420px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+  position: absolute;
+  top: 180px;           /* 👈 lower, like screenshot */
+  left: 0;
+  transform: translateX(-50%);
+
+  z-index: 5;
+  display: none;
+}
+
+.card.active {
+  display: block;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+.back-link {
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* STEP 1 – PHONE INPUT EXACT MATCH */
+
+.phone-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.country-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid #dbe2f1;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+
+.ng-flag {
+  width: 30px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+
+.country-box .code {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.country-box .arrow {
+  font-size: 12px;
+  color: #64748b;
+  margin-left: 2px;
+}
+
+.phone-input {
+  flex: 1;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe2f1;
+  font-size: 14px;
+}
+
+.phone-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Disabled continue button (exact look) */
+button.disabled {
+  background: #c7dbff;
+  cursor: not-allowed;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.checkbox-group a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.optional {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+/* OTP */
+.otp-row {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.otp-row input {
+  width: 48px;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* RESEND BOX */
+.resend-box {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  color: #94a3b8;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.disabled {
+  background: blue;
+  color: #ffffff;
+  cursor: allowed;
+}
+button:hover:not(.disabled) {
+  background: #1d4ed8;
+}
+
+.email-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe2f1;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.email-input::placeholder {
+  color: #94a3b8;
+}
+
+.passcode-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe2f1;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.passcode-input::placeholder {
+  color: #94a3b8;
+}
+
+.finish-btn {
+  width: 100%;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* SUCCESS MESSAGE */
+.success-btn {
+  width: 100%;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.success-btn:hover {
+  background: #15803d;
+}
+

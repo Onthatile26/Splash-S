@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Setup Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- LEFT SIDE -->
+  <div class="left">
+   <div class="brand-logo">
+  <img src="img/blue-logo (1).png" alt="Moniepoint Microfinance Bank">
+</div>
+
+<div class="login-wrap">
+  <span class="login-text">Already have an account?</span>
+  <button type="button" class="login-button">Login</button>
+</div>
+
+
+
+    <h2>Setup a Profile</h2>
+    <p>Follow the steps below to get started with us</p>
+
+    <div class="steps">
+      <div class="step active">STEP 1<br><span>Phone Number</span></div>
+      <div class="line"></div>
+      <div class="step">STEP 2<br><span>Consent Request</span></div>
+      <div class="line"></div>
+      <div class="step">STEP 3<br><span>Verification</span></div>
+      <div class="line"></div>
+      <div class="step">STEP 4<br><span>Email Address</span></div>
+      <div class="line"></div>
+      <div class="step">STEP 5<br><span>Setup Passcode</span></div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+
+   <div class="right">
+<!-- STEP 1: PHONE NUMBER -->
+<div class="card active">
+  <a class="back-link">← Go back</a>
+
+  <h3>What's your phone number?</h3>
+  <p class="subtext">
+    Enter the phone number you want to use for this account.
+  </p>
+
+  <label class="label">Phone number</label>
+
+  <div class="phone-row">
+    <div class="country-box">
+      <!-- YOU will add the Nigerian flag image here -->
+      <div class="flag-box">
+<img src="img/nigerian-flag.png" class="ng-flag" alt="Nigeria flag">
+
+      </div>
+
+      <span class="code">+234</span>
+      <span class="arrow">▾</span>
+    </div>
+
+    <input
+      class="phone-input"
+      type="text"
+      placeholder="Enter phone number"
+    >
+  </div>
+<p class="error-msg" id="phoneError"></p>
+
+<button class="continue disabled">Continue</button>
+</div>
+
+  <!-- STEP 2: CONSENT -->
+  <div class="card">
+    <a class="back-link">← Go back</a>
+
+    <h3>Moniepoint needs your consent to continue</h3>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox">
+        I have read and agree to the
+        <a>Terms and conditions</a> and
+        <a>Data privacy statement</a>
+      </label>
+
+      <label>
+        <input type="checkbox">
+        I have read and agree to the
+        <a>Data processing consent</a>
+      </label>
+
+      <label>
+        <input type="checkbox">
+        I would like to receive marketing and promotional information
+        <span class="optional">(optional)</span>
+      </label>
+    </div>
+
+    <button class="continue disabled">Continue</button>
+  </div>
+
+  <!-- STEP 3: OTP VERIFICATION -->
+  <div class="card">
+    <a class="back-link">← Go back</a>
+
+    <h3>Verify Your Phone Number</h3>
+    <p class="subtext">
+      We've just sent you a 6 digit code via SMS.
+      Check your messages and enter it here.
+    </p>
+
+    <div class="otp-row">
+      <input maxlength="1">
+      <input maxlength="1">
+      <input maxlength="1">
+      <input maxlength="1">
+      <input maxlength="1">
+      <input maxlength="1">
+    </div>
+
+    <div class="resend-box">
+      <span>Didn't get the code?</span>
+      <span class="timer">Resend (00:43)</span>
+    </div>
+
+<button class="continue disabled">Continue</button>
+
+  </div>
+
+</div>
+
+   <!-- CARD 4: EMAIL ADDRESS -->
+<div class="card">
+  <a class="back-link">← Go back</a>
+
+  <h3>Email Address</h3>
+  <p class="subtext">
+    Enter the email address you want to use for this account.
+  </p>
+
+  <label class="label">Email address</label>
+
+  <input
+    type="email"
+    class="email-input"
+    placeholder="Enter email"
+  >
+
+  <button class="continue">Continue</button>
+</div>
+
+  
+<!-- CARD 5: SETUP PASSCODE -->
+<div class="card">
+  <a class="back-link">← Go back</a>
+
+  <h3>Setup Passcode</h3>
+  <p class="subtext">
+    Create a secure passcode to protect your account.
+  </p>
+
+  <label class="label">Passcode</label>
+
+  <input
+    type="password"
+    class="passcode-input"
+    placeholder="Create passcode"
+  >
+
+  
+  <button class="continue finish-btn">Finish</button>
+</div>
+
+<!-- CARD 6: SUCCESS MESSAGE -->
+<div class="card">
+  <h3>Account Setup Complete 🎉</h3>
+
+  <p class="subtext">
+    Your account has been successfully created.
+    You can now continue to your dashboard.
+  </p>
+
+  <button class="success-btn">Go to Dashboard</button>
+</div>
+
+
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>

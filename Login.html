@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In – Moniepoint</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+
+<div class="login-page">
+
+  <div class="page-wrapper">
+  <a href="#" class="privacy-link"></a>
+</div>
+
+
+  <div class="login-card">
+
+    <div class="logo">
+      <img src="img/blue-logo (1).png" alt="Moniepoint Logo" />
+    </div>
+
+    <h1>Log In to Moniepoint</h1>
+
+    <div class="tabs">
+      <button class="tab active" id="phoneTab">Phone Number</button>
+      <button class="tab" id="usernameTab">Username</button>
+    </div>
+
+    <!-- PHONE FORM -->
+    <div class="form phone-form active">
+
+      <div class="phone-input">
+        <div class="flag">
+          <img src="img/naiga.png" alt="Nigeria" /> 
+          <span>+234</span>
+        </div>
+        <div class="divider"></div>
+        <input
+  id="phoneInput"
+  type="text"
+  inputmode="numeric"
+  pattern="[0-9]*"
+  autocomplete="off"
+  placeholder="Phone Number"
+/>
+      </div>
+
+      <!-- PASSWORD (HIDDEN) -->
+      <div class="password-input hidden">
+        <img src="img/g" alt="Lock" class="lock-icon" />
+        <input type="password" id="passwordInput" />
+        <span class="eye">👁</span>
+      </div>
+
+      <p class="error-message" id="errorMsg"></p>
+
+      <button class="next-btn" disabled>Next</button>
+
+      <div class="link">Change My Phone Number</div>
+
+      <div class="help">
+        Lost your phone?
+        <a href="#">Lock your Account</a>
+        <img class="lock-icon" src="img/lock.png" alt="Lock" />
+      </div>
+    </div>
+
+    <!-- USERNAME FORM -->
+    <div class="form username-form">
+
+      <div class="username-input">
+        <input type="text" id="usernameInput" placeholder="Username" />
+      </div>
+
+      
+      <div class="password-input hidden">
+        <img src="images/lock-blue.png" alt="Lock" class="lock-icon" />
+        <input type="password" />
+        <span class="eye">👁</span>
+      </div>
+
+      <p class="error-message"></p>
+      <div class="forgot">Forgot Username?</div>
+
+
+      <button class="next-btn" disabled>Next</button>
+
+    
+
+      <div class="help">
+        
+        Lost your phone ?  <a href="#">    Lock your Account</a>
+        <img class="lock-icon" src="img/lock.png" alt="Lock" />
+      </div>
+    </div>
+
+  </div>
+ 
+
+
+
+  <div class="signup">
+    New to Moniepoint? <strong>Sign Up</strong>
+  </div>
+
+</div>
+<div class ="loader hidden"></div>
+
+<!-- MODAL -->
+<div class="modal" id="limitModal">
+  <div class="modal-box">
+    <h3>Too many attempts</h3>
+    <p>Your account has been temporarily locked.</p>
+    <button id="closeModal">Close</button>
+  </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
